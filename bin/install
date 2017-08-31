@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const execSync = require('child_process').execSync;
+execSync('cp Procfile ../../ && cp Electron.js ../../');
+
+const FILENAME = '../../../package.json';
+let pjson = require(FILENAME);
+pjson.main = "./node_modules/react-electron-shell/electron-starter.js";
+pjson.homepage = "./";
+const fs = require('fs');
+fs.writeFileSync(FILENAME, JSON.stringify(pjson, null, '  '));
