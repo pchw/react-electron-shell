@@ -1,6 +1,6 @@
 {
   "name": "react-electron-shell",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "electron": "^1.7.5",
     "electron-packager": "^8.7.2",
